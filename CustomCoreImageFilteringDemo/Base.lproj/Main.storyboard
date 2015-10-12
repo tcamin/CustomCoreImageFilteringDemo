@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BGU-2F-z1Z">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="cK5-3G-rnb">
+            <objects>
+                <viewController id="BGU-2F-z1Z" customClass="ViewController" customModule="CustomCoreImageFilteringDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DUL-cv-Otd"/>
+                        <viewControllerLayoutGuide type="bottom" id="15H-0c-pYy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XpO-JU-my2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CP-Y6-MJ9">
+                                <rect key="frame" x="20" y="20" width="120" height="38"/>
+                                <animations/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Run CPU Filter"/>
+                                <connections>
+                                    <action selector="runCPUTapped:" destination="BGU-2F-z1Z" eventType="touchUpInside" id="J39-2F-9aG"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xpd-JK-cTY">
+                                <rect key="frame" x="150" y="158" width="300" height="300"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="NEB-J2-OUy"/>
+                                    <constraint firstAttribute="width" constant="300" id="Rnj-YG-0q3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNi-9S-gRD">
+                                <rect key="frame" x="20" y="66" width="168" height="38"/>
+                                <animations/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Run Core Image Filter"/>
+                                <connections>
+                                    <action selector="runCoreImageTapped:" destination="BGU-2F-z1Z" eventType="touchUpInside" id="Xw7-zR-ocJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sjq-cI-fk0">
+                                <rect key="frame" x="284" y="129" width="33" height="14"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xpd-JK-cTY" firstAttribute="top" secondItem="Sjq-cI-fk0" secondAttribute="bottom" constant="15" id="1nR-kq-tDr"/>
+                            <constraint firstItem="ZNi-9S-gRD" firstAttribute="top" secondItem="8CP-Y6-MJ9" secondAttribute="bottom" constant="8" id="6dE-xu-Izc"/>
+                            <constraint firstItem="Sjq-cI-fk0" firstAttribute="top" secondItem="ZNi-9S-gRD" secondAttribute="bottom" priority="250" constant="25" id="FRY-zx-LUO"/>
+                            <constraint firstAttribute="trailing" secondItem="xpd-JK-cTY" secondAttribute="trailing" id="Fy8-NR-2Lw"/>
+                            <constraint firstItem="xpd-JK-cTY" firstAttribute="centerX" secondItem="XpO-JU-my2" secondAttribute="centerX" id="Gku-ag-A2F"/>
+                            <constraint firstItem="Sjq-cI-fk0" firstAttribute="centerX" secondItem="XpO-JU-my2" secondAttribute="centerX" id="OCU-x9-rPM"/>
+                            <constraint firstItem="8CP-Y6-MJ9" firstAttribute="top" secondItem="DUL-cv-Otd" secondAttribute="bottom" id="S4r-Ec-QNi"/>
+                            <constraint firstItem="xpd-JK-cTY" firstAttribute="top" secondItem="8CP-Y6-MJ9" secondAttribute="bottom" constant="8" id="W5a-J4-kKm"/>
+                            <constraint firstItem="15H-0c-pYy" firstAttribute="top" secondItem="xpd-JK-cTY" secondAttribute="bottom" priority="250" id="aOw-Ax-QuT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="8CP-Y6-MJ9" secondAttribute="leading" id="e5z-iG-1vz"/>
+                            <constraint firstItem="ZNi-9S-gRD" firstAttribute="top" secondItem="DUL-cv-Otd" secondAttribute="bottom" id="fzX-DB-3nJ"/>
+                            <constraint firstItem="ZNi-9S-gRD" firstAttribute="leading" secondItem="8CP-Y6-MJ9" secondAttribute="leading" id="hRo-mN-xhn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZNi-9S-gRD" secondAttribute="trailing" id="plp-bd-QFK"/>
+                            <constraint firstItem="Sjq-cI-fk0" firstAttribute="centerX" secondItem="xpd-JK-cTY" secondAttribute="centerX" id="rdi-pA-Zrd"/>
+                            <constraint firstItem="xpd-JK-cTY" firstAttribute="leading" secondItem="XpO-JU-my2" secondAttribute="leading" id="v6X-Bg-Zn6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fzX-DB-3nJ"/>
+                                <exclude reference="plp-bd-QFK"/>
+                                <exclude reference="Fy8-NR-2Lw"/>
+                                <exclude reference="W5a-J4-kKm"/>
+                                <exclude reference="v6X-Bg-Zn6"/>
+                                <exclude reference="OCU-x9-rPM"/>
+                                <exclude reference="aOw-Ax-QuT"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="benchResult" destination="Sjq-cI-fk0" id="aFX-8R-xW7"/>
+                        <outlet property="resultImageView" destination="xpd-JK-cTY" id="3w9-TO-tzn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPd-UG-geQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="314" y="360"/>
+        </scene>
+    </scenes>
+</document>

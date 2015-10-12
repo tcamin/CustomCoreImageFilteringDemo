@@ -1,0 +1,29 @@
+kernel vec4 OneColorFocusCoreImageFilter(sampler source, __color focusColor)
+{
+    vec4 pixel = sample(source, samplerCoord(source));
+
+    const float cLinearThreshold = 0.0031308;
+    const float powE = 1.0 / 2.4;
+    const float focusColorThreshold = 70.0 / 255.0;
+
+    vec4 diff = abs(pixel - focusColor);
+    bool pixelShouldBeInOriginalColor = (diff.r < focusColorThreshold && diff.g < focusColorThreshold && diff.b < focusColorThreshold);
+
+    float Y = dot(pixel.rgb, vec3(0.2126, 0.7152, 0.0722));
+
+    /*
+
+accca
+        if (Y <= cLinearThreshold) {
+            Y *= 12.92;
+        } else {
+            Y = 1.055 * pow(Y, powE) - 0.055;
+        }
+
+        Can be rewritten as follows to avoid branches
+    */
+    bool belowThreshold = (Y <= cLinearThreshold);
+    Y = Y * 12.92 * float(belowThreshold) + (1.055 * pow(Y, powE) - 0.055) * float(!belowThreshold);
+
+    return pixel.rgba * float(pixelShouldBeInOriginalColor) + vec4(vec3(Y), 1.0) * float(!pixelShouldBeInOriginalColor);
+}
