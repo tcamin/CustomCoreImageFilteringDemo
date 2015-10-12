@@ -11,9 +11,13 @@ import UIKit
 class OneColorFocusCoreImageFilter: CIFilter {
     private static var kernel: CIColorKernel?
     private static var context: CIContext?
-    private var inputImage: CIImage?
+
+    private var _inputImage: CIImage?
+    private var inputImage: CIImage? {
+        get { return _inputImage }
+        set { _inputImage = newValue }
+    }
     private var focusColor: CIColor?
-    
     
     init(image: UIImage, focusColorRed: Int, focusColorGreen: Int, focusColorBlue: Int) {
         super.init()
