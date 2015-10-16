@@ -17,6 +17,7 @@
 		AE53EE3D1BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53EE381BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift */; settings = {ASSET_TAGS = (); }; };
 		AE53EE3E1BCBC55B0005A0A9 /* tstimage-large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE53EE391BCBC55B0005A0A9 /* tstimage-large.jpg */; settings = {ASSET_TAGS = (); }; };
 		AE53EE3F1BCBC55B0005A0A9 /* tstimage-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE53EE3A1BCBC55B0005A0A9 /* tstimage-small.jpg */; settings = {ASSET_TAGS = (); }; };
+		CF83C4D71BCD63130023E130 /* OneColorFocusNeonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF83C4D61BCD63130023E130 /* OneColorFocusNeonFilter.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		AE53EE381BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneColorFocusFilterCPU.swift; sourceTree = "<group>"; };
 		AE53EE391BCBC55B0005A0A9 /* tstimage-large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tstimage-large.jpg"; sourceTree = "<group>"; };
 		AE53EE3A1BCBC55B0005A0A9 /* tstimage-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tstimage-small.jpg"; sourceTree = "<group>"; };
+		CF83C4D51BCD63130023E130 /* OneColorFocusNeonFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneColorFocusNeonFilter.h; sourceTree = "<group>"; };
+		CF83C4D61BCD63130023E130 /* OneColorFocusNeonFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneColorFocusNeonFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 		AE53EE1D1BCBC48C0005A0A9 /* CustomCoreImageFilteringDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CF83C4D11BCD5F860023E130 /* NeonFiltering */,
 				AE53EE341BCBC55B0005A0A9 /* CoreImageFiltering */,
 				AE53EE371BCBC55B0005A0A9 /* CPUFiltering */,
 				AE53EE391BCBC55B0005A0A9 /* tstimage-large.jpg */,
@@ -74,6 +78,7 @@
 				AE53EE251BCBC48C0005A0A9 /* Assets.xcassets */,
 				AE53EE271BCBC48C0005A0A9 /* LaunchScreen.storyboard */,
 				AE53EE2A1BCBC48C0005A0A9 /* Info.plist */,
+				CF83C4D41BCD63130023E130 /* CustomCoreImageFilteringDemo-Bridging-Header.h */,
 			);
 			path = CustomCoreImageFilteringDemo;
 			sourceTree = "<group>";
@@ -93,6 +98,15 @@
 				AE53EE381BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift */,
 			);
 			path = CPUFiltering;
+			sourceTree = "<group>";
+		};
+		CF83C4D11BCD5F860023E130 /* NeonFiltering */ = {
+			isa = PBXGroup;
+			children = (
+				CF83C4D51BCD63130023E130 /* OneColorFocusNeonFilter.h */,
+				CF83C4D61BCD63130023E130 /* OneColorFocusNeonFilter.m */,
+			);
+			path = NeonFiltering;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +186,7 @@
 				AE53EE3C1BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.swift in Sources */,
 				AE53EE211BCBC48C0005A0A9 /* ViewController.swift in Sources */,
 				AE53EE3D1BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift in Sources */,
+				CF83C4D71BCD63130023E130 /* OneColorFocusNeonFilter.m in Sources */,
 				AE53EE1F1BCBC48C0005A0A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

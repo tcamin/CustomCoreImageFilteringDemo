@@ -57,5 +57,22 @@ class ViewController: UIViewController {
         
         print(self.benchResult.text!)
     }
+    
+    @IBAction func runNeonTapped(sender: AnyObject) {
+        prepareSourceImage()
+        
+        var elapsedTime = CFAbsoluteTimeGetCurrent()
+        
+        let filter = OneColorFocusNeonFilter(image: sourceImage, focusColorRed: 10, focusColorGreen: 10, focusColorBlue: 10)
+        let filteredImage = filter.createOneColorFocusImage()
+        
+        self.resultImageView.image = filteredImage
+        
+        elapsedTime = (CFAbsoluteTimeGetCurrent() - elapsedTime) * 1000.0
+        
+        self.benchResult.text = String(format: "Neon: %.3fms", elapsedTime)
+        
+        print(self.benchResult.text!)
+    }
 }
 
