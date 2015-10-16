@@ -14,7 +14,7 @@
 		AE53EE291BCBC48C0005A0A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE53EE271BCBC48C0005A0A9 /* LaunchScreen.storyboard */; };
 		AE53EE3B1BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = AE53EE351BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.cikernel */; settings = {ASSET_TAGS = (); }; };
 		AE53EE3C1BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53EE361BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.swift */; settings = {ASSET_TAGS = (); }; };
-		AE53EE3D1BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53EE381BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift */; settings = {ASSET_TAGS = (); }; };
+		AE53EE3D1BCBC55B0005A0A9 /* OneColorFocusCPUFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53EE381BCBC55B0005A0A9 /* OneColorFocusCPUFilter.swift */; settings = {ASSET_TAGS = (); }; };
 		AE53EE3E1BCBC55B0005A0A9 /* tstimage-large.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE53EE391BCBC55B0005A0A9 /* tstimage-large.jpg */; settings = {ASSET_TAGS = (); }; };
 		AE53EE3F1BCBC55B0005A0A9 /* tstimage-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE53EE3A1BCBC55B0005A0A9 /* tstimage-small.jpg */; settings = {ASSET_TAGS = (); }; };
 		CF83C4D71BCD63130023E130 /* OneColorFocusNeonFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF83C4D61BCD63130023E130 /* OneColorFocusNeonFilter.m */; settings = {ASSET_TAGS = (); }; };
@@ -30,9 +30,10 @@
 		AE53EE2A1BCBC48C0005A0A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE53EE351BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OneColorFocusCoreImageFilter.cikernel; sourceTree = "<group>"; };
 		AE53EE361BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneColorFocusCoreImageFilter.swift; sourceTree = "<group>"; };
-		AE53EE381BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneColorFocusFilterCPU.swift; sourceTree = "<group>"; };
+		AE53EE381BCBC55B0005A0A9 /* OneColorFocusCPUFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneColorFocusCPUFilter.swift; sourceTree = "<group>"; };
 		AE53EE391BCBC55B0005A0A9 /* tstimage-large.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tstimage-large.jpg"; sourceTree = "<group>"; };
 		AE53EE3A1BCBC55B0005A0A9 /* tstimage-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tstimage-small.jpg"; sourceTree = "<group>"; };
+		CF83C4D41BCD63130023E130 /* CustomCoreImageFilteringDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CustomCoreImageFilteringDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CF83C4D51BCD63130023E130 /* OneColorFocusNeonFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneColorFocusNeonFilter.h; sourceTree = "<group>"; };
 		CF83C4D61BCD63130023E130 /* OneColorFocusNeonFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneColorFocusNeonFilter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +96,7 @@
 		AE53EE371BCBC55B0005A0A9 /* CPUFiltering */ = {
 			isa = PBXGroup;
 			children = (
-				AE53EE381BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift */,
+				AE53EE381BCBC55B0005A0A9 /* OneColorFocusCPUFilter.swift */,
 			);
 			path = CPUFiltering;
 			sourceTree = "<group>";
@@ -185,7 +186,7 @@
 			files = (
 				AE53EE3C1BCBC55B0005A0A9 /* OneColorFocusCoreImageFilter.swift in Sources */,
 				AE53EE211BCBC48C0005A0A9 /* ViewController.swift in Sources */,
-				AE53EE3D1BCBC55B0005A0A9 /* OneColorFocusFilterCPU.swift in Sources */,
+				AE53EE3D1BCBC55B0005A0A9 /* OneColorFocusCPUFilter.swift in Sources */,
 				CF83C4D71BCD63130023E130 /* OneColorFocusNeonFilter.m in Sources */,
 				AE53EE1F1BCBC48C0005A0A9 /* AppDelegate.swift in Sources */,
 			);
@@ -306,6 +307,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomascamin.CustomCoreImageFilteringDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomCoreImageFilteringDemo/CustomCoreImageFilteringDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Debug;
@@ -320,6 +322,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tomascamin.CustomCoreImageFilteringDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CustomCoreImageFilteringDemo/CustomCoreImageFilteringDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;

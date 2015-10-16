@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         
         var elapsedTime = CFAbsoluteTimeGetCurrent()
         
-        let filter = OneColorFocusFilterCPU(image: sourceImage, focusColorRed: 10, focusColorGreen: 10, focusColorBlue: 10)
+        let filter = OneColorFocusCPUFilter(image: sourceImage, focusColorRed: 10, focusColorGreen: 10, focusColorBlue: 10)
         let filteredImage = filter.createOneColorFocusImage()!
         
         self.resultImageView.image = filteredImage

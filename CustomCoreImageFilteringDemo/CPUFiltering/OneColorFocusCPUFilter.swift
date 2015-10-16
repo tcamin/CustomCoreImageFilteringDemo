@@ -1,12 +1,13 @@
+
 //
-//  OneColorFocusFilterCPU.swift
+//  OneColorFocusCPUFilter.swift
 //  Custom Grayscale convert
 //
 //
 
 import UIKit
 
-class OneColorFocusFilterCPU {
+class OneColorFocusCPUFilter {
     private let redMultiplier = 0.2126 / 255.0
     private let greenMultiplier = 0.7152 / 255.0
     private let blueMultiplier = 0.0722 / 255.0
