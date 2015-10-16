@@ -2,11 +2,13 @@
 
 A sample Xcode project in Swift that shows how to create custom filters using Core Image kernels as described [here](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Conceptual/CoreImaging/ci_advanced_concepts/ci.advanced_concepts.html#//apple_ref/doc/uid/TP30001185-CH9-SW1).
 
+Additionally there's a version of the same filter implemented using NEON intrinsics which outperforms Core Image when processing small images.
+
 
 ## Requirements
 
 - Xcode 7
-- iOS 8.0+
+- iOS 8.0+ (NEON is not available in Simulator)
 
 
 ## License
